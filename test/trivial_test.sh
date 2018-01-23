@@ -1,0 +1,1 @@
+java -classpath ../bin seedu.addressbook.AddressBook  < test1.in | diff test1.out -
