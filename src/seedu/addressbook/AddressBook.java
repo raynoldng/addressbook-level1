@@ -639,11 +639,15 @@ public class AddressBook {
         for (int i = 0; i < persons.size(); i++) {
             final HashMap<PersonProperty, String> person = persons.get(i);
             final int displayIndex = i + DISPLAYED_INDEX_OFFSET;
-            messageAccumulator.append('\t')
-                              .append(getIndexedPersonListElementMessage(displayIndex, person))
-                              .append(LS);
+            appendPersonString(messageAccumulator, person, displayIndex);
         }
         return messageAccumulator.toString();
+    }
+
+    private static void appendPersonString(StringBuilder messageAccumulator, HashMap<PersonProperty, String> person, int displayIndex) {
+        messageAccumulator.append('\t')
+                          .append(getIndexedPersonListElementMessage(displayIndex, person))
+                          .append(LS);
     }
 
     /**
