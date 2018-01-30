@@ -644,7 +644,8 @@ public class AddressBook {
         return messageAccumulator.toString();
     }
 
-    private static void appendPersonString(StringBuilder messageAccumulator, HashMap<PersonProperty, String> person, int displayIndex) {
+    private static void appendPersonString(StringBuilder messageAccumulator, HashMap<PersonProperty, String> person,
+                                           int displayIndex) {
         messageAccumulator.append('\t')
                           .append(getIndexedPersonListElementMessage(displayIndex, person))
                           .append(LS);
