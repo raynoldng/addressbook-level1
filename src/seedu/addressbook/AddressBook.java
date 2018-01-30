@@ -604,6 +604,11 @@ public class AddressBook {
         return inputLine;
     }
 
+    /**
+     * Returns true if inputLine is a blank line or comment (starts with comment marker)
+     * @param inputLine
+     * @return true if inputLine is a blank line of comment
+     */
     private static boolean isBlankLineOrComment(String inputLine) {
         return inputLine.trim().isEmpty() || inputLine.trim().charAt(0) == INPUT_COMMENT_MARKER;
     }
